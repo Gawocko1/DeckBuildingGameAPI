@@ -11,6 +11,7 @@ class Card:
         self.tags = []
 
 class CardCondition:
+    """Conditions related to card placements and requirements."""
     def __init__(self, tags: list[str] | None = None, cost_range: Tuple[int, int] | None = None):
         self.tags = tags or []
         self.cost_range = cost_range

@@ -8,4 +8,7 @@ class Player:
         self.health = 100
         self.buys = 1
         self.money = 0
+        self.hand: List = []
         self.cards: List = []
+        self.drawpile: List = []
+        self.discardpile: List = []
