@@ -5,10 +5,16 @@ class Player:
         self.name = name
         self.actions = 1
         self.max_health = 100
-        self.health = 100
+        self.health = self.max_health
         self.buys = 1
         self.money = 0
         self.hand: List = []
         self.cards: List = []
         self.drawpile: List = []
         self.discardpile: List = []
+    
+    def win(self, game):
+        game.players = [self]
+
+    def lose(self, game):
+        game.players.remove(self)
