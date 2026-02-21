@@ -2,18 +2,21 @@ import functions as f
 from Card import Card
 from CardCategory import CardCategory
 
-class Silver(Card):
+class Village(Card):
     def __init__(self):
         super().__init__()
-        self.name = "Silver"
+        self.name = "Village"
         self.price = 3
-        self.types = {CardCategory.TREASURE}
-        self.tags = {"gain_money",
+        self.types = {CardCategory.ACTION}
+        self.tags = {"draw",
+                     "phase:action",
+                     "action_gain",
                      "non_terminal",
                      "trashable",
                      "gainable",
                      "discardable"}
-        self.description = "Adds 2 coins to your money this turn."
+        self.description = "Draws another card and gives you 2 actions."
         self.bonuses = {
-            "coins": 2,
+            "cards": 1,
+            "actions": 2
         }

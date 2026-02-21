@@ -77,4 +77,3 @@ class Card:
             attacker (_type_): Your attacker
         """
         pass
-

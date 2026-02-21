@@ -9,6 +9,11 @@ class Province(Card):
         self.price = 8
         self.types = {CardCategory.VICTORY}
         self.description = "Adds 6 victory points to your stock."
+        self.tags = {"gain_victory",
+                     "non_terminal",
+                     "trashable",
+                     "gainable",
+                     "discardable"}
         self.bonuses = {
             "victory": 6,
         }

@@ -9,6 +9,11 @@ class Curse(Card):
         self.price = 0
         self.types = {CardCategory.VICTORY}
         self.description = "Takes away 1 victory point from your stock."
+        self.tags = {"gain_victory",
+                     "non_terminal",
+                     "trashable",
+                     "gainable",
+                     "discardable"}
         self.bonuses = {
             "victory": -1,
         }

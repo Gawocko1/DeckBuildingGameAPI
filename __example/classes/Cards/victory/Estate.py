@@ -9,6 +9,11 @@ class Estate(Card):
         self.price = 2
         self.types = {CardCategory.TREASURE}
         self.description = "Adds 1 victory point to your stock."
+        self.tags = {"gain_victory",
+                     "non_terminal",
+                     "trashable",
+                     "gainable",
+                     "discardable"}
         self.bonuses = {
             "victory": 1,
         }
