@@ -77,6 +77,10 @@ def prompt_player(game, action, **kwargs):
     set_game(game)
     return []
 
+def add_money(game, player: PlayerPosition, n=1):
+    game.players[player].money += n
+    set_game(game)
+
 def is_in_range(n: float | int, low: float | int, high: float | int) -> bool:
     if low <= n <= high:
         return True
@@ -98,14 +102,6 @@ def draw_card(game, player: PlayerPosition, n=1, location: CardLocation = locati
 
 def add_buy(game, player: PlayerPosition, n=1):
     game.players[player].buys += n
-    set_game(game)
-
-def add_victory(game, player: PlayerPosition, n=1):
-    game.players[player].victory += n
-    set_game(game)
-
-def add_money(game, player: PlayerPosition, n=1):
-    game.players[player].money += n
     set_game(game)
 
 def discard_card(game, player: PlayerPosition, n=1, condition: CardCondition | None = None):

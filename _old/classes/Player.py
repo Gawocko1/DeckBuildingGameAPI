@@ -8,7 +8,6 @@ class Player:
         self.health = self.max_health
         self.buys = 1
         self.money = 0
-        self.victory = 0
         self.hand: List = []
         self.cards: List = []
         self.drawpile: List = []
